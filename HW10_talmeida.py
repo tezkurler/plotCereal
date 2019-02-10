@@ -1,19 +1,3 @@
-# Activity X.X.X: An introduction to Python.
-# File: HW10_talmeida.py
-# Date: 15 November 2018
-# By: Tessca Almeida
-# talmeida
-# Section: 2
-# Team: 40
-#
-# ELECTRONIC SIGNATURE
-# Tessca Almeida
-#
-# The electronic signature above indicates that the program
-# submitted for evaluation is my individual work. I have
-# a general understanding of all aspects of its development
-# and execution.
-#
 # This program outputs the five of the top and worst cereals decided by 
 # ratings, and the average sugar, calories, protein, and potassium of 
 # the two different groups. Please note that the best cereal is at 
@@ -21,23 +5,26 @@
 #---------------------------------------------------
 #  Inputs
 #---------------------------------------------------
+# import csv and initialize variables
 import csv
 
 totalSugar = 0.0
 totalCalories = 0.0
-totalProtein=0.0
+totalProtein = 0.0
 totalPotassium= 0.0
 
 #---------------------------------------------------
 #  Computations
 #---------------------------------------------------
+# remove headers and input data into an array
 with open('cereal.csv', 'r', newline='') as file:
     reader= csv.reader(file,delimiter=',')
     cereal= []
     for row in reader:
         cereal.append(row)
     cereal.pop(0)
-    
+
+# remove headers and input data into an array    
 p= len(cereal)
 for x in range(0, p):
         for y in range(0, p-x-1):
